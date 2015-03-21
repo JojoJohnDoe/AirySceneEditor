@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F7A1E188-3C69-4572-906E-045CAF23EE8C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HotellensApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8A244FD80A1B4D4499FC6E93E398D378334868A5</key>
+		<string>https://github.com/jojojohndoe/Hotellens</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HotellensApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8A244FD80A1B4D4499FC6E93E398D378334868A5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jojojohndoe/Hotellens</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8A244FD80A1B4D4499FC6E93E398D378334868A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A244FD80A1B4D4499FC6E93E398D378334868A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HotellensApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

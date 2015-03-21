@@ -1,0 +1,6 @@
+HotellensApp.xcodeproj/xcuserdata/*.xcuserdatad/
+HotellensApp/Images.xcassets/third.imageset/Contents.json
+Pods/
+HotellensApp.xcworkspace/xcuserdata/
+Podfile.lock
+

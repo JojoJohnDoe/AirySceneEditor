@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>default_params</key>
+	<dict>
+		<key>platform</key>
+		<integer>0</integer>
+		<key>lang</key>
+		<string>de</string>
+		<key>auth_token</key>
+		<string>ed2456914e48c1e17b7bd922177291ef8b7f553edf1b1f66b6fc1a076524b22f</string>
+		<key>auth_key</key>
+		<string>5b89d47db5de20522efbc4a9bcb90362aea0a137d7e095f4fb005a6cd09d8224</string>
+		<key>data_type</key>
+		<integer>0</integer>
+		<key>wlp</key>
+		<integer>1</integer>
+		<key>version</key>
+		<string>1.0</string>
+	</dict>
+	<key>base_url</key>
+	<string>https://app.hotellens.com/v1.0/</string>
+	<key>user_agent</key>
+	<string>1337 iPhone App</string>
+	<key>auth_user</key>
+	<string>w5UCK7bH</string>
+	<key>auth_passwd</key>
+	<string>w2lUo%1j?#An1gRt</string>
+</dict>
+</plist>

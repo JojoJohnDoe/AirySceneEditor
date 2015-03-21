@@ -1,0 +1,33 @@
+
+/* Class = "IBUITabBarItem"; title = "Shop"; ObjectID = "3D9-OU-aQi"; */
+"3D9-OU-aQi.title" = "Shop";
+
+/* Class = "IBUILabel"; text = "Password"; ObjectID = "3WA-PP-AVs"; */
+"3WA-PP-AVs.text" = "Passwort";
+
+/* Class = "IBUILabel"; text = "Today"; ObjectID = "3nI-7L-s4Q"; */
+"3nI-7L-s4Q.text" = "Heute";
+
+/* Class = "IBUITabBarItem"; title = "Dashboard"; ObjectID = "Ji1-cI-EXk"; */
+"Ji1-cI-EXk.title" = "Dashboard";
+
+/* Class = "IBUILabel"; text = "Loaded by SecondViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Loaded by SecondViewController";
+
+/* Class = "IBUITabBarItem"; title = "Alerts"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Alerts";
+
+/* Class = "IBUITabBarItem"; title = "Charts"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Charts";
+
+/* Class = "IBUILabel"; text = "Username"; ObjectID = "jaV-EL-vuv"; */
+"jaV-EL-vuv.text" = "Username";
+
+/* Class = "IBUITabBarItem"; title = "More"; ObjectID = "jsp-GL-2TV"; */
+"jsp-GL-2TV.title" = "Mehr";
+
+/* Class = "IBUIButton"; normalTitle = "Login"; ObjectID = "woY-DQ-0zS"; */
+"woY-DQ-0zS.normalTitle" = "Login";
+
+/* Class = "IBUILabel"; text = "Second View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Zweiter View";

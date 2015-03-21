@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Channel" syncable="YES">
+        <attribute name="activated" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_short" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pk" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="r_dayRatingForRoomTypeAndChannel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayRatingForRoomTypeAndChannel" inverseName="channel" inverseEntity="DayRatingForRoomTypeAndChannel" syncable="YES"/>
+    </entity>
+    <entity name="Currency" representedClassName="HotellensApp.Currency" syncable="YES">
+        <attribute name="ios_identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_short" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pk" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="r_userInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="currency" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="Day" representedClassName="HotellensApp.Day" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="info" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayInfoForRoomType" inverseName="day" inverseEntity="DayInfoForRoomType" syncable="YES"/>
+        <relationship name="rating" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayRatingForRoomTypeAndChannel" inverseName="day" inverseEntity="DayRatingForRoomTypeAndChannel" syncable="YES"/>
+    </entity>
+    <entity name="DayInfoForRoomType" representedClassName="HotellensApp.DayInfoForRoomType" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="occupancy_competitors" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="occupancy_region" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="occupancy_subscriber" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="price_max" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="price_min" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="price_subscriber" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="price_subscriber_flag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="price_trend" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="price_yielding" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="info" inverseEntity="Day" syncable="YES"/>
+        <relationship name="roomType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomType" inverseName="r_dayInfoForRoomType" inverseEntity="RoomType" syncable="YES"/>
+    </entity>
+    <entity name="DayRatingForRoomTypeAndChannel" representedClassName="HotellensApp.DayRatingForRoomTypeAndChannel" syncable="YES">
+        <attribute name="ranking_trend" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ranking_value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="trend" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="channel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Channel" inverseName="r_dayRatingForRoomTypeAndChannel" inverseEntity="Channel" syncable="YES"/>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="rating" inverseEntity="Day" syncable="YES"/>
+        <relationship name="roomType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomType" inverseName="r_dayRatingForRoomTypeAndChannel" inverseEntity="RoomType" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="HotellensApp.Event" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pk" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="EventConfig" representedClassName="HotellensApp.EventConfig" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pk" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Hotel" representedClassName="HotellensApp.Hotel" syncable="YES">
+        <attribute name="activated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_short" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pk" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="r_userInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="hotel" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="Language" representedClassName="HotellensApp.Language" syncable="YES">
+        <attribute name="iso639code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pk" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="r_userInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="language" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="LengthOfStay" representedClassName="HotellensApp.LengthOfStay" syncable="YES">
+        <attribute name="pk" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="r_User" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="length_of_stay" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="RoomType" representedClassName="HotellensApp.RoomType" syncable="YES">
+        <attribute name="adult_count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_short" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pk" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="r_dayInfoForRoomType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayInfoForRoomType" inverseName="roomType" inverseEntity="DayInfoForRoomType" syncable="YES"/>
+        <relationship name="r_dayRatingForRoomTypeAndChannel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayRatingForRoomTypeAndChannel" inverseName="roomType" inverseEntity="DayRatingForRoomTypeAndChannel" syncable="YES"/>
+        <relationship name="r_userInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserInfo" inverseName="roomType" inverseEntity="UserInfo" syncable="YES"/>
+    </entity>
+    <entity name="UserActivatedDays" representedClassName="HotellensApp.UserActivatedDays" syncable="YES">
+        <attribute name="activated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isHoliday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isoDay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="HotellensApp.UserInfo" syncable="YES">
+        <attribute name="currency_decimal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency_left" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="currency_symbol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currency_thousands" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hotline_freecall" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hotline_phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="included_breakfast" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="included_rate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="included_rateType" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pk" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_country_iso" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_country_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_timestamp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_timezone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_zip" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="currency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="r_userInfo" inverseEntity="Currency" syncable="YES"/>
+        <relationship name="hotel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hotel" inverseName="r_userInfo" inverseEntity="Hotel" syncable="YES"/>
+        <relationship name="language" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="r_userInfo" inverseEntity="Language" syncable="YES"/>
+        <relationship name="length_of_stay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LengthOfStay" inverseName="r_User" inverseEntity="LengthOfStay" syncable="YES"/>
+        <relationship name="roomType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomType" inverseName="r_userInfo" inverseEntity="RoomType" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Channel" positionX="-153" positionY="153" width="128" height="120"/>
+        <element name="Currency" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="Day" positionX="-9" positionY="36" width="128" height="88"/>
+        <element name="DayInfoForRoomType" positionX="9" positionY="54" width="128" height="223"/>
+        <element name="DayRatingForRoomTypeAndChannel" positionX="25" positionY="350" width="128" height="148"/>
+        <element name="Event" positionX="-333" positionY="428" width="128" height="73"/>
+        <element name="EventConfig" positionX="18" positionY="63" width="128" height="73"/>
+        <element name="Hotel" positionX="-54" positionY="0" width="128" height="208"/>
+        <element name="Language" positionX="-18" positionY="27" width="128" height="103"/>
+        <element name="LengthOfStay" positionX="-144" positionY="153" width="128" height="88"/>
+        <element name="RoomType" positionX="0" positionY="45" width="128" height="148"/>
+        <element name="UserActivatedDays" positionX="-135" positionY="162" width="128" height="90"/>
+        <element name="UserInfo" positionX="-281" positionY="62" width="128" height="375"/>
+    </elements>
+</model>
