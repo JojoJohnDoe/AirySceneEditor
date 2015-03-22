@@ -13,6 +13,8 @@ import GoogleAnalytics_iOS_SDK
 
 class ARTriggerEditor: UITableViewController {
     
+    var rootPageViewController : ARPageViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

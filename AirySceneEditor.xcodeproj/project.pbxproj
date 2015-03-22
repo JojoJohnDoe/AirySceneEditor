@@ -50,6 +50,7 @@
 		EB6F1F561A1CEB8D0014B0F2 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6F1F551A1CEB8D0014B0F2 /* libsqlite3.0.dylib */; };
 		EB7E1AA31ABDD2E800D6026D /* ARDeviceSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E1AA21ABDD2E800D6026D /* ARDeviceSelector.swift */; };
 		EB7E1AA51ABDD30800D6026D /* ARTriggerEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E1AA41ABDD30800D6026D /* ARTriggerEditor.swift */; };
+		EB7E1AA81ABF1AF800D6026D /* ARPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E1AA71ABF1AF800D6026D /* ARPageViewController.swift */; };
 		EBACCA731AB442B5003B5948 /* HLSDashboardChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBACCA721AB442B5003B5948 /* HLSDashboardChartView.swift */; };
 		EBACCA751AB44372003B5948 /* HLSDashboardChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBACCA741AB44372003B5948 /* HLSDashboardChartView.xib */; };
 		EBACCA771AB44534003B5948 /* HLSDashboardChartViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBACCA761AB44534003B5948 /* HLSDashboardChartViewCell.xib */; };
@@ -127,6 +128,7 @@
 		EB6F1F551A1CEB8D0014B0F2 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EB7E1AA21ABDD2E800D6026D /* ARDeviceSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDeviceSelector.swift; sourceTree = "<group>"; };
 		EB7E1AA41ABDD30800D6026D /* ARTriggerEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTriggerEditor.swift; sourceTree = "<group>"; };
+		EB7E1AA71ABF1AF800D6026D /* ARPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPageViewController.swift; sourceTree = "<group>"; };
 		EBACCA721AB442B5003B5948 /* HLSDashboardChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLSDashboardChartView.swift; sourceTree = "<group>"; };
 		EBACCA741AB44372003B5948 /* HLSDashboardChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLSDashboardChartView.xib; sourceTree = "<group>"; };
 		EBACCA761AB44534003B5948 /* HLSDashboardChartViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLSDashboardChartViewCell.xib; sourceTree = "<group>"; };
@@ -277,8 +279,7 @@
 			children = (
 				EB64CFE019AD3305000B926C /* Main.storyboard */,
 				EB64CFDA19AD3305000B926C /* AppDelegate.swift */,
-				EB7E1A9D1ABDD23200D6026D /* Item Selector */,
-				EB7E1A9E1ABDD24000D6026D /* Editor */,
+				EB7E1AA61ABF1AD000D6026D /* AiryMods */,
 				EB7E1A9F1ABDD26800D6026D /* Legacy */,
 				EB02CDEF1A019E8200906691 /* DataStore */,
 				EB64CFE319AD3305000B926C /* Images.xcassets */,
@@ -382,6 +383,16 @@
 				EB6730BB1A75375E00FFC551 /* Shop */,
 			);
 			name = Legacy;
+			sourceTree = "<group>";
+		};
+		EB7E1AA61ABF1AD000D6026D /* AiryMods */ = {
+			isa = PBXGroup;
+			children = (
+				EB7E1AA71ABF1AF800D6026D /* ARPageViewController.swift */,
+				EB7E1A9E1ABDD24000D6026D /* Editor */,
+				EB7E1A9D1ABDD23200D6026D /* Item Selector */,
+			);
+			name = AiryMods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +538,7 @@
 				EB64CFDB19AD3305000B926C /* AppDelegate.swift in Sources */,
 				B7A7D7AC1A8A541100543D26 /* Hotel.swift in Sources */,
 				B7A7D7B01A8A541100543D26 /* DayRatingForRoomTypeAndChannel.swift in Sources */,
+				EB7E1AA81ABF1AF800D6026D /* ARPageViewController.swift in Sources */,
 				EB13A5F219DF5DD70018C786 /* HLSDashboardCell1Store.swift in Sources */,
 				EB7E1AA51ABDD30800D6026D /* ARTriggerEditor.swift in Sources */,
 				B7A7D7BA1A8A541100543D26 /* Channel.swift in Sources */,

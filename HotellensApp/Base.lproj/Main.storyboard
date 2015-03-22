@@ -42,37 +42,9 @@
             </objects>
             <point key="canvasLocation" x="1962" y="1225"/>
         </scene>
-        <!--Device Selector-->
-        <scene sceneID="1yT-3I-a38">
-            <objects>
-                <tableViewController id="8UL-bo-Cfa" customClass="ARDeviceSelector" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lEy-9w-U7u">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7Ov-tK-a4e">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Ov-tK-a4e" id="o7L-zc-uRz">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8UL-bo-Cfa" id="716-cB-R8M"/>
-                            <outlet property="delegate" destination="8UL-bo-Cfa" id="Rfb-a6-ser"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Device Selector" id="ChM-dI-WT7"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jee-Wa-nXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="694" y="-167"/>
-        </scene>
         <!--Device Selection-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController id="8rJ-Kc-sve" customClass="HLSChartViewController" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -98,6 +70,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Device Selection" image="Charts" id="cPa-gy-q4n"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="14" y="1195"/>
         </scene>
@@ -123,7 +96,7 @@
         <!--Trigger Editor-->
         <scene sceneID="PIs-P9-4Dy">
             <objects>
-                <tableViewController id="mwA-tw-6cf" customClass="ARTriggerEditor" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="triggerEditor" id="mwA-tw-6cf" customClass="ARTriggerEditor" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1f0-sc-6qH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +118,37 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc0-GY-v4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="455"/>
+            <point key="canvasLocation" x="910" y="113"/>
+        </scene>
+        <!--Device Selector-->
+        <scene sceneID="JhD-vD-xwp">
+            <objects>
+                <tableViewController storyboardIdentifier="deviceSelector" id="myH-BZ-4mb" customClass="ARDeviceSelector" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kj6-e8-jf2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tNU-XT-0bW">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="M0k-nd-BIc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M0k-nd-BIc" id="Gqb-7c-7Ug">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="myH-BZ-4mb" id="L78-8n-daG"/>
+                            <outlet property="delegate" destination="myH-BZ-4mb" id="n6W-3y-sM8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bi-FB-v0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="682"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="8Yd-jD-hRX">
@@ -200,15 +203,15 @@
             </objects>
             <point key="canvasLocation" x="435" y="1195"/>
         </scene>
-        <!--Dashboard-->
+        <!--Device Selector-->
         <scene sceneID="Y5L-8h-eXU">
             <objects>
-                <pageViewController modalTransitionStyle="flipHorizontal" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Zih-TM-i6X" customClass="HLSDashboardPageViewController" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard" id="hg4-8O-gj3"/>
+                <pageViewController modalTransitionStyle="flipHorizontal" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Zih-TM-i6X" customClass="ARPageViewController" customModule="AirySceneEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Device Selector" image="Dashboard" id="hg4-8O-gj3"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGc-sI-Bhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819" y="1195"/>
+            <point key="canvasLocation" x="435" y="601"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="vej-Pf-CKa">
@@ -276,8 +279,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8UL-bo-Cfa" kind="relationship" relationship="viewControllers" id="1t9-Fx-emP"/>
-                        <segue destination="mwA-tw-6cf" kind="relationship" relationship="viewControllers" id="eEC-Qe-HjI"/>
+                        <segue destination="Zih-TM-i6X" kind="relationship" relationship="viewControllers" id="rC3-nT-stb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
